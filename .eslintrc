@@ -1,0 +1,72 @@
+{
+    "root": true,
+    "plugins": [
+        "@typescript-eslint",
+        "jsdoc"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jsdoc/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "for-direction": "off",
+
+        // Typescript specific rules
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+
+        // JSDoc specific rules
+        "jsdoc/check-tag-names": [
+            "warn",
+            {
+                "definedTags": [
+                    "brief"
+                ]
+            }
+        ],
+        "jsdoc/require-jsdoc": [
+            "warn",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": true
+                },
+                "contexts": [
+                    "TSEnumDeclaration"
+                ],
+                "checkConstructors": false,
+                "checkGetters": false,
+                "checkSetters": false
+            }
+        ],
+        "jsdoc/require-returns": [
+            "warn",
+            {
+                "exemptedBy": [
+                    "constructor"
+                ],
+                "checkGetters": false
+            }
+        ]
+    }
+}
