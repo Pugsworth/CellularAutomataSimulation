@@ -1,4 +1,4 @@
-import { Cell, NeighborShape, Grid } from "./grid";
+import { Cell, NeighborShape, Grid } from "@/lib/grid_old";
 
 /**
  * @brief A cell whose data is a boolean value

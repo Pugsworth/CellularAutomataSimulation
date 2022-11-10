@@ -1,6 +1,6 @@
 import { Sprator } from "./sprator";
 import Jimp from "jimp";
-import { Grid } from "./grid";
+import { Grid } from "@/lib/grid_old";
 import { exit } from "process";
 
 const sprator = new Sprator(0, 0, 8, 8);
@@ -44,7 +44,7 @@ const spriteList = sprator.generateSprites(10);
 // console.log("Sprite info: %s", sprite.toString());
 let id = 0;
 for (const sprite of spriteList) {
-    let image = new Jimp(sprite.width, sprite.height, 0x00000000, (err: any, image: any) => {
+    new Jimp(sprite.width, sprite.height, 0x00000000, (err: any, image: any) => {
         if (err) throw err;
 
 
